@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45CC5C001D954F0C00A94B07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CC5BFF1D954F0C00A94B07 /* main.m */; };
-		45CC5C031D954F0C00A94B07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CC5C021D954F0C00A94B07 /* AppDelegate.m */; };
-		45CC5C061D954F0C00A94B07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CC5C051D954F0C00A94B07 /* ViewController.m */; };
-		45CC5C091D954F0C00A94B07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC5C071D954F0C00A94B07 /* Main.storyboard */; };
-		45CC5C0C1D954F0C00A94B07 /* MapMyStreet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45CC5C0A1D954F0C00A94B07 /* MapMyStreet.xcdatamodeld */; };
-		45CC5C0E1D954F0C00A94B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CC5C0D1D954F0C00A94B07 /* Assets.xcassets */; };
-		45CC5C111D954F0C00A94B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CC5C0F1D954F0C00A94B07 /* LaunchScreen.storyboard */; };
+		450C9B671D955069000593E4 /* BFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B631D955069000593E4 /* BFAppDelegate.m */; };
+		450C9B6B1D955102000593E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B6A1D955102000593E4 /* main.m */; };
+		450C9B791D955157000593E4 /* mapmystreet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B771D955157000593E4 /* mapmystreet.xcdatamodeld */; };
+		450C9B7B1D955172000593E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450C9B7A1D955172000593E4 /* Images.xcassets */; };
+		450C9B7D1D955182000593E4 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450C9B7C1D955182000593E4 /* main.storyboard */; };
+		450C9B801D9551E9000593E4 /* BFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B7F1D9551E9000593E4 /* BFRootViewController.m */; };
+		459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B41D967B7F00E896B6 /* CoreLocation.framework */; };
+		459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B61D967B8A00E896B6 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450C9B601D955046000593E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		450C9B621D955069000593E4 /* BFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFAppDelegate.h; sourceTree = "<group>"; };
+		450C9B631D955069000593E4 /* BFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFAppDelegate.m; sourceTree = "<group>"; };
+		450C9B6A1D955102000593E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		450C9B781D955157000593E4 /* mapmystreet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mapmystreet.xcdatamodel; sourceTree = "<group>"; };
+		450C9B7A1D955172000593E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		450C9B7C1D955182000593E4 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		450C9B7E1D9551E9000593E4 /* BFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFRootViewController.h; sourceTree = "<group>"; };
+		450C9B7F1D9551E9000593E4 /* BFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFRootViewController.m; sourceTree = "<group>"; };
+		459BD5B41D967B7F00E896B6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		459BD5B61D967B8A00E896B6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		459BD5B81D967C4400E896B6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		459BD5B91D967C4400E896B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45CC5BFB1D954F0C00A94B07 /* MapMyStreet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyStreet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		45CC5BFF1D954F0C00A94B07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		45CC5C011D954F0C00A94B07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		45CC5C021D954F0C00A94B07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		45CC5C041D954F0C00A94B07 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		45CC5C051D954F0C00A94B07 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		45CC5C081D954F0C00A94B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		45CC5C0B1D954F0C00A94B07 /* MapMyStreet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapMyStreet.xcdatamodel; sourceTree = "<group>"; };
-		45CC5C0D1D954F0C00A94B07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		45CC5C101D954F0C00A94B07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		45CC5C121D954F0C00A94B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,108 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */,
+				459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450C9B611D955069000593E4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B6C1D955109000593E4 /* DataSource */,
+				450C9B6D1D955109000593E4 /* Manager */,
+				450C9B6E1D955109000593E4 /* Model */,
+				450C9B6F1D955109000593E4 /* ViewController */,
+				450C9B621D955069000593E4 /* BFAppDelegate.h */,
+				450C9B631D955069000593E4 /* BFAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		450C9B6C1D955109000593E4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		450C9B6D1D955109000593E4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		450C9B6E1D955109000593E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		450C9B6F1D955109000593E4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B7E1D9551E9000593E4 /* BFRootViewController.h */,
+				450C9B7F1D9551E9000593E4 /* BFRootViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		450C9B731D955111000593E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B741D955111000593E4 /* Assets */,
+				450C9B751D955111000593E4 /* DataModel */,
+				450C9B761D955111000593E4 /* Interface */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		450C9B741D955111000593E4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B7A1D955172000593E4 /* Images.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		450C9B751D955111000593E4 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B771D955157000593E4 /* mapmystreet.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		450C9B761D955111000593E4 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				450C9B7C1D955182000593E4 /* main.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		459BD5B31D967B7F00E896B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				459BD5B61D967B8A00E896B6 /* CoreMotion.framework */,
+				459BD5B41D967B7F00E896B6 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45CC5BF21D954F0C00A94B07 = {
 			isa = PBXGroup;
 			children = (
+				459BD5B91D967C4400E896B6 /* README.md */,
+				459BD5B81D967C4400E896B6 /* Podfile */,
 				45CC5BFD1D954F0C00A94B07 /* MapMyStreet */,
 				45CC5BFC1D954F0C00A94B07 /* Products */,
+				459BD5B31D967B7F00E896B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,15 +155,8 @@
 		45CC5BFD1D954F0C00A94B07 /* MapMyStreet */ = {
 			isa = PBXGroup;
 			children = (
-				45CC5C011D954F0C00A94B07 /* AppDelegate.h */,
-				45CC5C021D954F0C00A94B07 /* AppDelegate.m */,
-				45CC5C041D954F0C00A94B07 /* ViewController.h */,
-				45CC5C051D954F0C00A94B07 /* ViewController.m */,
-				45CC5C071D954F0C00A94B07 /* Main.storyboard */,
-				45CC5C0D1D954F0C00A94B07 /* Assets.xcassets */,
-				45CC5C0F1D954F0C00A94B07 /* LaunchScreen.storyboard */,
-				45CC5C121D954F0C00A94B07 /* Info.plist */,
-				45CC5C0A1D954F0C00A94B07 /* MapMyStreet.xcdatamodeld */,
+				450C9B611D955069000593E4 /* Classes */,
+				450C9B731D955111000593E4 /* Resources */,
 				45CC5BFE1D954F0C00A94B07 /* Supporting Files */,
 			);
 			path = MapMyStreet;
@@ -77,7 +165,8 @@
 		45CC5BFE1D954F0C00A94B07 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				45CC5BFF1D954F0C00A94B07 /* main.m */,
+				450C9B6A1D955102000593E4 /* main.m */,
+				450C9B601D955046000593E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +197,7 @@
 		45CC5BF31D954F0C00A94B07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BF;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Bytefeast Ltd";
 				TargetAttributes = {
@@ -115,6 +205,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = GR96UBPD3F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,9 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CC5C111D954F0C00A94B07 /* LaunchScreen.storyboard in Resources */,
-				45CC5C0E1D954F0C00A94B07 /* Assets.xcassets in Resources */,
-				45CC5C091D954F0C00A94B07 /* Main.storyboard in Resources */,
+				450C9B7B1D955172000593E4 /* Images.xcassets in Resources */,
+				450C9B7D1D955182000593E4 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,33 +248,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CC5C061D954F0C00A94B07 /* ViewController.m in Sources */,
-				45CC5C031D954F0C00A94B07 /* AppDelegate.m in Sources */,
-				45CC5C001D954F0C00A94B07 /* main.m in Sources */,
-				45CC5C0C1D954F0C00A94B07 /* MapMyStreet.xcdatamodeld in Sources */,
+				450C9B801D9551E9000593E4 /* BFRootViewController.m in Sources */,
+				450C9B6B1D955102000593E4 /* main.m in Sources */,
+				450C9B671D955069000593E4 /* BFAppDelegate.m in Sources */,
+				450C9B791D955157000593E4 /* mapmystreet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		45CC5C071D954F0C00A94B07 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45CC5C081D954F0C00A94B07 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		45CC5C0F1D954F0C00A94B07 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45CC5C101D954F0C00A94B07 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		45CC5C131D954F0C00A94B07 /* Debug */ = {
@@ -274,9 +349,8 @@
 		45CC5C161D954F0C00A94B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GR96UBPD3F;
-				INFOPLIST_FILE = MapMyStreet/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MapMyStreet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytefeast.MapMyStreet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,9 +360,8 @@
 		45CC5C171D954F0C00A94B07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GR96UBPD3F;
-				INFOPLIST_FILE = MapMyStreet/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MapMyStreet/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytefeast.MapMyStreet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,17 +387,18 @@
 				45CC5C171D954F0C00A94B07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		45CC5C0A1D954F0C00A94B07 /* MapMyStreet.xcdatamodeld */ = {
+		450C9B771D955157000593E4 /* mapmystreet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				45CC5C0B1D954F0C00A94B07 /* MapMyStreet.xcdatamodel */,
+				450C9B781D955157000593E4 /* mapmystreet.xcdatamodel */,
 			);
-			currentVersion = 45CC5C0B1D954F0C00A94B07 /* MapMyStreet.xcdatamodel */;
-			path = MapMyStreet.xcdatamodeld;
+			currentVersion = 450C9B781D955157000593E4 /* mapmystreet.xcdatamodel */;
+			path = mapmystreet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

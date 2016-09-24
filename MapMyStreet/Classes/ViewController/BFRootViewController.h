@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BFRootViewController.h
 //  MapMyStreet
 //
 //  Created by Vinay Chavan on 23/09/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BFRootViewController : UIViewController
 
 @end
-
