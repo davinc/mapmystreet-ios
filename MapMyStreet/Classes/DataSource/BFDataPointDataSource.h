@@ -8,6 +8,8 @@
 
 #import <VCBaseEntityDataSource/VCBaseEntityDataSource.h>
 
+#import "BFDataPoint.h"
+
 @interface BFDataPointDataSource : VCBaseEntityDataSource
 
 @end

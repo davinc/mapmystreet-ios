@@ -38,7 +38,7 @@
 		self.coreDataStack = [[VCCoreDataStack alloc] initWithManagedObjectModelUrl:modelURL];
 		
 		self.locationManager = [[CLLocationManager alloc] init];
-		[self.locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+		[self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
 		[self.locationManager setDelegate:self];
 		
 		self.motionManager = [[CMMotionManager alloc] init];
@@ -58,26 +58,13 @@
 	[self.locationManager startUpdatingLocation];
 	[self.motionManager startDeviceMotionUpdatesToQueue:[NSOperationQueue mainQueue]
 											withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
-												if (fabs(motion.userAcceleration.x) > 1.5f ||
-													fabs(motion.userAcceleration.y) > 1.5f ||
-													fabs(motion.userAcceleration.z) > 1.5f) {
-													NSLog(@"Bump Detected at %@", self.currentLocation);
-													
-													NSManagedObjectContext *managedObjectContext = [self.coreDataStack managedObjectContext];
-													
-													BFDataPoint *dataPoint = [NSEntityDescription insertNewObjectForEntityForName:@"DataPoint"
-																										   inManagedObjectContext:managedObjectContext];
-													dataPoint.accelerationX = motion.userAcceleration.x;
-													dataPoint.accelerationY = motion.userAcceleration.y;
-													dataPoint.accelerationZ = motion.userAcceleration.z;
-													dataPoint.timestamp = motion.timestamp;
-													dataPoint.speed = self.currentLocation.speed;
-													dataPoint.longitude = self.currentLocation.coordinate.longitude;
-													dataPoint.latitude = self.currentLocation.coordinate.latitude;
-													dataPoint.course = self.currentLocation.course;
-													dataPoint.altitude = self.currentLocation.altitude;
-													
-													[self.coreDataStack saveManagedObjectContext:managedObjectContext];
+												self.currentMotion = motion;
+												
+												if (fabs(motion.userAcceleration.x) > 1.0f ||
+													fabs(motion.userAcceleration.y) > 1.0f ||
+													fabs(motion.userAcceleration.z) > 1.0f)
+												{
+													[self registerDataPointManually:NO];
 												}
 											}];
 }
@@ -88,7 +75,27 @@
 	[self.motionManager stopDeviceMotionUpdates];
 }
 
-
+- (void)registerDataPointManually:(BOOL)manually
+{
+	NSLog(@"Bump Detected at %@", self.currentLocation);
+	
+	NSManagedObjectContext *managedObjectContext = [self.coreDataStack managedObjectContext];
+	
+	BFDataPoint *dataPoint = [NSEntityDescription insertNewObjectForEntityForName:@"DataPoint"
+														   inManagedObjectContext:managedObjectContext];
+	dataPoint.accelerationX = self.currentMotion.userAcceleration.x;
+	dataPoint.accelerationY = self.currentMotion.userAcceleration.y;
+	dataPoint.accelerationZ = self.currentMotion.userAcceleration.z;
+	dataPoint.timestamp = self.currentMotion.timestamp;
+	dataPoint.speed = self.currentLocation.speed;
+	dataPoint.longitude = self.currentLocation.coordinate.longitude;
+	dataPoint.latitude = self.currentLocation.coordinate.latitude;
+	dataPoint.course = self.currentLocation.course;
+	dataPoint.altitude = self.currentLocation.altitude;
+	dataPoint.manualEntry = manually;
+	
+	[self.coreDataStack saveManagedObjectContext:managedObjectContext];
+}
 
 #pragma mark - Private
 

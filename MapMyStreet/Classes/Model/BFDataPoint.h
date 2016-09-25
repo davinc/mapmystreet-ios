@@ -21,6 +21,7 @@
 @property (nonatomic) double accelerationY;
 @property (nonatomic) double accelerationZ;
 @property (nonatomic) double timestamp;
+@property (nonatomic) BOOL manualEntry;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 

@@ -16,7 +16,9 @@
  */
 @interface BFDataPointManager : NSObject
 
-@property (nonatomic, strong) CLLocation *currentLocation;
+@property (nonatomic, copy) CLLocation *currentLocation;
+@property (nonatomic, copy) CMDeviceMotion *currentMotion;
+
 @property (nonatomic, strong) VCCoreDataStack *coreDataStack;
 
 /**
@@ -35,5 +37,7 @@
  <#Description#>
  */
 - (void)stopDataPointCollection;
+
+- (void)registerDataPointManually:(BOOL)manually;
 
 @end

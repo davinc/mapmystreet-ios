@@ -32,7 +32,13 @@
                             <constraint firstItem="SY0-Vj-m4E" firstAttribute="bottom" secondItem="gmA-RE-GX5" secondAttribute="top" id="vt8-cm-pPq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MapMyStreet" id="RFG-dK-UcO"/>
+                    <navigationItem key="navigationItem" title="MapMyStreet" id="RFG-dK-UcO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MiG-vY-KRD">
+                            <connections>
+                                <action selector="didTapAddDataPoint:" destination="yIp-r6-hU2" id="lcC-cG-f1B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="SY0-Vj-m4E" id="5on-Uv-3MF"/>

@@ -42,14 +42,29 @@
 	[[BFDataPointManager sharedDataPointManager] startDataPointCollection];
 	
 	[self.mapView setRegion:MKCoordinateRegionMake(self.mapView.userLocation.location.coordinate,
-												   MKCoordinateSpanMake(0.0005,
-																		0.0005))
+												   MKCoordinateSpanMake(0.0009,
+																		0.0009))
 				   animated:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	
+//	[[BFDataPointManager sharedDataPointManager] stopDataPointCollection];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)didTapAddDataPoint:(id)sender
+{
+	[[BFDataPointManager sharedDataPointManager] registerDataPointManually:YES];
 }
 
 
@@ -84,7 +99,12 @@
 			annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
 														  reuseIdentifier:annotationViewIdentifier];
 			annotationView.canShowCallout = NO;
-			annotationView.image = [UIImage imageNamed:@"bump_annotation"];
+		}
+		
+		if ([(BFDataPoint*)annotation manualEntry]) {
+			annotationView.image = [UIImage imageNamed:@"bump_annotation_manual"];
+		}else {
+			annotationView.image = [UIImage imageNamed:@"bump_annotation_automatic"];
 		}
 	}
 	return annotationView;

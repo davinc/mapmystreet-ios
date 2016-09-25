@@ -19,6 +19,7 @@
 @dynamic accelerationY;
 @dynamic accelerationZ;
 @dynamic timestamp;
+@dynamic manualEntry;
 
 - (CLLocationCoordinate2D)coordinate
 {

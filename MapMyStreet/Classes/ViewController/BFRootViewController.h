@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
+- (IBAction)didTapAddDataPoint:(id)sender;
+
 @end
