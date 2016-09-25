@@ -13,8 +13,11 @@
 		450C9B7B1D955172000593E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450C9B7A1D955172000593E4 /* Images.xcassets */; };
 		450C9B7D1D955182000593E4 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450C9B7C1D955182000593E4 /* main.storyboard */; };
 		450C9B801D9551E9000593E4 /* BFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B7F1D9551E9000593E4 /* BFRootViewController.m */; };
+		45240B681D96D0D7006EF51C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45240B671D96D0D7006EF51C /* CoreData.framework */; };
+		4530B2061D968770005516EC /* BFDataPointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530B2051D968770005516EC /* BFDataPointManager.m */; };
 		459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B41D967B7F00E896B6 /* CoreLocation.framework */; };
 		459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B61D967B8A00E896B6 /* CoreMotion.framework */; };
+		459DE6551D97BB8D00E7886E /* BFDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 459DE6541D97BB8D00E7886E /* BFDataPoint.m */; };
 		9FD02DF80FB2B7E9F8CAFE3A /* libPods-MapMyStreet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB9D5C41DB6254E0E2C0C26 /* libPods-MapMyStreet.a */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +32,15 @@
 		450C9B7C1D955182000593E4 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		450C9B7E1D9551E9000593E4 /* BFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFRootViewController.h; sourceTree = "<group>"; };
 		450C9B7F1D9551E9000593E4 /* BFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFRootViewController.m; sourceTree = "<group>"; };
+		45240B671D96D0D7006EF51C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4530B2041D968770005516EC /* BFDataPointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPointManager.h; sourceTree = "<group>"; };
+		4530B2051D968770005516EC /* BFDataPointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPointManager.m; sourceTree = "<group>"; };
 		459BD5B41D967B7F00E896B6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		459BD5B61D967B8A00E896B6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		459BD5B81D967C4400E896B6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		459BD5B81D967C4400E896B6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		459BD5B91D967C4400E896B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		459DE6531D97BB8D00E7886E /* BFDataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPoint.h; sourceTree = "<group>"; };
+		459DE6541D97BB8D00E7886E /* BFDataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPoint.m; sourceTree = "<group>"; };
 		45CC5BFB1D954F0C00A94B07 /* MapMyStreet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyStreet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB9D5C41DB6254E0E2C0C26 /* libPods-MapMyStreet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapMyStreet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3550F651ED499FD7DA8C12C /* Pods-MapMyStreet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyStreet.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapMyStreet/Pods-MapMyStreet.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45240B681D96D0D7006EF51C /* CoreData.framework in Frameworks */,
 				459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */,
 				459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */,
 				9FD02DF80FB2B7E9F8CAFE3A /* libPods-MapMyStreet.a in Frameworks */,
@@ -84,6 +93,8 @@
 		450C9B6D1D955109000593E4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4530B2041D968770005516EC /* BFDataPointManager.h */,
+				4530B2051D968770005516EC /* BFDataPointManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -91,6 +102,8 @@
 		450C9B6E1D955109000593E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				459DE6531D97BB8D00E7886E /* BFDataPoint.h */,
+				459DE6541D97BB8D00E7886E /* BFDataPoint.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +154,7 @@
 		459BD5B31D967B7F00E896B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45240B671D96D0D7006EF51C /* CoreData.framework */,
 				459BD5B61D967B8A00E896B6 /* CoreMotion.framework */,
 				459BD5B41D967B7F00E896B6 /* CoreLocation.framework */,
 				7FB9D5C41DB6254E0E2C0C26 /* libPods-MapMyStreet.a */,
@@ -315,7 +329,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4530B2061D968770005516EC /* BFDataPointManager.m in Sources */,
 				450C9B801D9551E9000593E4 /* BFRootViewController.m in Sources */,
+				459DE6551D97BB8D00E7886E /* BFDataPoint.m in Sources */,
 				450C9B6B1D955102000593E4 /* main.m in Sources */,
 				450C9B671D955069000593E4 /* BFAppDelegate.m in Sources */,
 				450C9B791D955157000593E4 /* mapmystreet.xcdatamodeld in Sources */,

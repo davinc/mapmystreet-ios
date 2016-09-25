@@ -1,0 +1,23 @@
+//
+//  BFDataPoint.m
+//  MapMyStreet
+//
+//  Created by Vinay Chavan on 25/09/16.
+//  Copyright © 2016 Bytefeast Ltd. All rights reserved.
+//
+
+#import "BFDataPoint.h"
+
+@implementation BFDataPoint
+
+	@dynamic speed;
+	@dynamic longitude;
+	@dynamic latitude;
+	@dynamic course;
+	@dynamic altitude;
+	@dynamic accelerationX;
+	@dynamic accelerationY;
+	@dynamic accelerationZ;
+	@dynamic timestamp;
+	
+@end

@@ -4,12 +4,8 @@ platform :ios, '9.0'
 
 def target_pods
  pod 'AFNetworking', '~> 3.1.0'
- pod 'Fabric'
- pod 'Crashlytics'
- pod 'GoogleAnalytics'
- pod 'SVProgressHUD'
- pod 'DZNEmptyDataSet'
- pod 'JDStatusBarNotification'
+ pod 'VCCoreDataStack', :git => 'https://github.com/davinc/VCCoreDataStack.git'
+ pod 'VCBaseEntityDataSource', :git => 'https://github.com/davinc/VCBaseEntityDataSource.git'
 end
 
 target 'MapMyStreet' do
