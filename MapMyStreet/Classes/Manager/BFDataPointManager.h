@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 
 
 /**
@@ -14,6 +16,7 @@
  */
 @interface BFDataPointManager : NSObject
 
+@property (nonatomic, strong) CLLocation *currentLocation;
 
 /**
  <#Description#>

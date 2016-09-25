@@ -10,7 +10,11 @@
 
 #import "BFDataPointManager.h"
 
+#import "BFDataPointDataSource.h"
+
 @interface BFRootViewController ()
+
+
 
 @end
 
@@ -19,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -33,5 +42,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+	[mapView setRegion:MKCoordinateRegionMake(userLocation.location.coordinate,
+											  MKCoordinateSpanMake(0.005,
+																   0.005))
+			  animated:YES];
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+	MKCoordinateRegion region = mapView.region;
+	NSString *regionString = [NSString stringWithFormat:@"{{%f,%f},{%f,%f}}",
+							  region.center.latitude,
+							  region.center.longitude,
+							  region.span.latitudeDelta,
+							  region.span.longitudeDelta];
+	NSLog(@"%@", regionString);
+	
+	// update the region filter, fetch new annotations for adding into map for that region
+}
 
 @end

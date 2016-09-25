@@ -15,6 +15,8 @@
 		450C9B801D9551E9000593E4 /* BFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450C9B7F1D9551E9000593E4 /* BFRootViewController.m */; };
 		45240B681D96D0D7006EF51C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45240B671D96D0D7006EF51C /* CoreData.framework */; };
 		4530B2061D968770005516EC /* BFDataPointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530B2051D968770005516EC /* BFDataPointManager.m */; };
+		4577CA471D97C3BE00FD643F /* BFDataPointDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4577CA461D97C3BE00FD643F /* BFDataPointDataSource.m */; };
+		4577CA491D97C4E600FD643F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4577CA481D97C4E600FD643F /* MapKit.framework */; };
 		459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B41D967B7F00E896B6 /* CoreLocation.framework */; };
 		459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459BD5B61D967B8A00E896B6 /* CoreMotion.framework */; };
 		459DE6551D97BB8D00E7886E /* BFDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 459DE6541D97BB8D00E7886E /* BFDataPoint.m */; };
@@ -35,6 +37,9 @@
 		45240B671D96D0D7006EF51C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4530B2041D968770005516EC /* BFDataPointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPointManager.h; sourceTree = "<group>"; };
 		4530B2051D968770005516EC /* BFDataPointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPointManager.m; sourceTree = "<group>"; };
+		4577CA451D97C3BE00FD643F /* BFDataPointDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFDataPointDataSource.h; sourceTree = "<group>"; };
+		4577CA461D97C3BE00FD643F /* BFDataPointDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFDataPointDataSource.m; sourceTree = "<group>"; };
+		4577CA481D97C4E600FD643F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		459BD5B41D967B7F00E896B6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		459BD5B61D967B8A00E896B6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		459BD5B81D967C4400E896B6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4577CA491D97C4E600FD643F /* MapKit.framework in Frameworks */,
 				45240B681D96D0D7006EF51C /* CoreData.framework in Frameworks */,
 				459BD5B71D967B8A00E896B6 /* CoreMotion.framework in Frameworks */,
 				459BD5B51D967B7F00E896B6 /* CoreLocation.framework in Frameworks */,
@@ -73,10 +79,10 @@
 		450C9B611D955069000593E4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				450C9B6F1D955109000593E4 /* ViewController */,
 				450C9B6C1D955109000593E4 /* DataSource */,
 				450C9B6D1D955109000593E4 /* Manager */,
 				450C9B6E1D955109000593E4 /* Model */,
-				450C9B6F1D955109000593E4 /* ViewController */,
 				450C9B621D955069000593E4 /* BFAppDelegate.h */,
 				450C9B631D955069000593E4 /* BFAppDelegate.m */,
 			);
@@ -86,6 +92,8 @@
 		450C9B6C1D955109000593E4 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				4577CA451D97C3BE00FD643F /* BFDataPointDataSource.h */,
+				4577CA461D97C3BE00FD643F /* BFDataPointDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 		459BD5B31D967B7F00E896B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4577CA481D97C4E600FD643F /* MapKit.framework */,
 				45240B671D96D0D7006EF51C /* CoreData.framework */,
 				459BD5B61D967B8A00E896B6 /* CoreMotion.framework */,
 				459BD5B41D967B7F00E896B6 /* CoreLocation.framework */,
@@ -335,6 +344,7 @@
 				450C9B6B1D955102000593E4 /* main.m in Sources */,
 				450C9B671D955069000593E4 /* BFAppDelegate.m in Sources */,
 				450C9B791D955157000593E4 /* mapmystreet.xcdatamodeld in Sources */,
+				4577CA471D97C3BE00FD643F /* BFDataPointDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

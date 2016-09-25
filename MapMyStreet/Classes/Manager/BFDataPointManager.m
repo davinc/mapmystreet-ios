@@ -8,15 +8,10 @@
 
 #import "BFDataPointManager.h"
 
-#import <CoreLocation/CoreLocation.h>
-#import <CoreMotion/CoreMotion.h>
-
 @interface BFDataPointManager () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CMMotionManager *motionManager;
-
-@property (nonatomic, strong) CLLocation *currentLocation;
 
 @end
 
