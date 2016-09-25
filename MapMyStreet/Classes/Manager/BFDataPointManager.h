@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>
-
+#import <VCCoreDataStack/VCCoreDataStack.h>
 
 /**
  <#Description#>
@@ -17,6 +17,7 @@
 @interface BFDataPointManager : NSObject
 
 @property (nonatomic, strong) CLLocation *currentLocation;
+@property (nonatomic, strong) VCCoreDataStack *coreDataStack;
 
 /**
  <#Description#>

@@ -10,14 +10,20 @@
 
 @implementation BFDataPoint
 
-	@dynamic speed;
-	@dynamic longitude;
-	@dynamic latitude;
-	@dynamic course;
-	@dynamic altitude;
-	@dynamic accelerationX;
-	@dynamic accelerationY;
-	@dynamic accelerationZ;
-	@dynamic timestamp;
-	
+@dynamic speed;
+@dynamic longitude;
+@dynamic latitude;
+@dynamic course;
+@dynamic altitude;
+@dynamic accelerationX;
+@dynamic accelerationY;
+@dynamic accelerationZ;
+@dynamic timestamp;
+
+- (CLLocationCoordinate2D)coordinate
+{
+	return CLLocationCoordinate2DMake(self.latitude,
+									  self.longitude);
+}
+
 @end

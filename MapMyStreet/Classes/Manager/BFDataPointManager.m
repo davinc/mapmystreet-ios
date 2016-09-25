@@ -8,6 +8,8 @@
 
 #import "BFDataPointManager.h"
 
+#import "BFDataPoint.h"
+
 @interface BFDataPointManager () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -32,6 +34,9 @@
 {
 	self = [super init];
 	if (self) {
+		NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"mapmystreet" withExtension:@"momd"];
+		self.coreDataStack = [[VCCoreDataStack alloc] initWithManagedObjectModelUrl:modelURL];
+		
 		self.locationManager = [[CLLocationManager alloc] init];
 		[self.locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
 		[self.locationManager setDelegate:self];
@@ -57,6 +62,22 @@
 													fabs(motion.userAcceleration.y) > 1.5f ||
 													fabs(motion.userAcceleration.z) > 1.5f) {
 													NSLog(@"Bump Detected at %@", self.currentLocation);
+													
+													NSManagedObjectContext *managedObjectContext = [self.coreDataStack managedObjectContext];
+													
+													BFDataPoint *dataPoint = [NSEntityDescription insertNewObjectForEntityForName:@"DataPoint"
+																										   inManagedObjectContext:managedObjectContext];
+													dataPoint.accelerationX = motion.userAcceleration.x;
+													dataPoint.accelerationY = motion.userAcceleration.y;
+													dataPoint.accelerationZ = motion.userAcceleration.z;
+													dataPoint.timestamp = motion.timestamp;
+													dataPoint.speed = self.currentLocation.speed;
+													dataPoint.longitude = self.currentLocation.coordinate.longitude;
+													dataPoint.latitude = self.currentLocation.coordinate.latitude;
+													dataPoint.course = self.currentLocation.course;
+													dataPoint.altitude = self.currentLocation.altitude;
+													
+													[self.coreDataStack saveManagedObjectContext:managedObjectContext];
 												}
 											}];
 }
@@ -74,7 +95,7 @@
 - (void)requestAuthorizationIfRequired
 {
 	if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
-		[self.locationManager requestWhenInUseAuthorization];
+		[self.locationManager requestAlwaysAuthorization];
 	}
 
 	if ([self.motionManager isAccelerometerAvailable]) {
